@@ -1,0 +1,22 @@
+{
+  "crm.lead": {
+    "type": {
+      "lead": "opportunity",
+      "opportunity": "opportunity",
+      "default": "opportunity",
+      "description": "En v18, 'lead' y 'opportunity' se unifican. Mapear ambos a 'opportunity' si es necesario. Verificar comportamiento en v18."
+    },
+    "probability": {
+      "description": "Campo probability puede tener valores diferentes en v18. Verificar rangos (0-100 en v13)."
+    }
+  },
+  "crm.stage": {
+    "type": {
+      "lead": "lead",
+      "opportunity": "opportunity",
+      "default": "lead",
+      "description": "Tipo de etapa. Verificar compatibilidad con v18"
+    }
+  }
+}
+

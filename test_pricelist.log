@@ -1,0 +1,624 @@
+[INICIO] Archivos de log:
+✓ Mapeos de campos cargados desde exceptions/field_mappings.json
+✓ Configuración de campos many2many cargada desde exceptions/m2m_fields.json
+✓ Configuración de campos many2one por nombre cargada desde exceptions/m2o_fields_by_name.json
+✓ Mapeo de monedas cargado: 2 mapeos
+✓ Mapeo de unidades de medida cargado: 29 mapeos, 13 cambios de nombre
+✓ Mapeo de categorías UoM cargado: 5 mapeos
+✓ Mapeo de templates de suscripción cargado: 6 templates
+[INICIO] Cargando configuración...
+✓ Conectado a https://erp.datos101.com (DB: d101, User: lorena.perez@clodofy.com)
+✓ Conectado a http://localhost:8069 (DB: 105, User: admin)
+✓ Configuración cargada (Batch size: 1000, Modo: PRODUCCIÓN)
+[INICIO] ✓ Configuración cargada
+[INICIO] ⚠ Modo de migración múltiple: Se migrarán 3 modelos: res.partner, product.pricelist, sale.subscription
+[INICIO] (Variable de entorno MIGRATE_MODEL='res.partner,product.pricelist,sale.subscription' detectada)
+[INICIO] Para migrar todos los modelos, desactiva esta variable o elimínala del .env
+[INICIO] ✓ Modelo configurado: res.partner (allow_many2one=True)
+[INICIO] ✓ Modelo configurado: product.pricelist (allow_many2one=True)
+[INICIO] ✓ Modelo configurado: sale.subscription (allow_many2one=True)
+[PREPARACIÓN] Analizando dependencias entre modelos...
+⚠ No se pudo obtener campos de sale.subscription: <Fault 2: "Object sale.subscription doesn't exist">
+⚠ Dependencia circular detectada para res.partner
+✓ Modelos ordenados por dependencias: ['product.pricelist', 'res.partner', 'sale.subscription']
+[PREPARACIÓN] ✓ Orden de migración determinado: 3 modelos
+INICIANDO MIGRACIÓN DE TABLA: product.pricelist
+[CONTEO] Contando registros en v13 (modelo: product.pricelist)...
+[CONTEO] ✓ Registros en v13: 58
+[CONTEO] Contando registros en migration.tracking (v18)...
+[CONTEO] ✓ Registros en migration.tracking (v18): 58
+[CONTEO] ✓ Todos los registros están migrados
+[M2M] Archivo de importación existente: imports/import_product_pricelist_res_partner.json
+[M2M] No se exportará nuevamente
+[PASO 1/4] ✓ Tabla intermedia importada: imports/import_product_pricelist_res_partner.json
+[PASO 1/4] ✓ Cargados 58 registros desde JSON
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[PASO 1/4] ✓ Encontrados 58 registros ya migrados
+[PASO 2/4] ✓ Total de registros preparados: 0
+[PASO 2/4] ✓ Registros ya migrados (omitidos): 58
+✓ TABLA product.pricelist - TODOS LOS REGISTROS YA ESTÁN MIGRADOS
+INICIANDO MIGRACIÓN DE TABLA: res.partner
+[CONTEO] Contando registros en v13 (modelo: res.partner)...
+[CONTEO] ✓ Registros en v13: 31307
+[CONTEO] Contando registros en migration.tracking (v18)...
+[CONTEO] ✓ Registros en migration.tracking (v18): 31310
+[CONTEO] ⚠ Hay 3 registros más en v18 que en v13
+[M2M] ✓ Relación many2many detectada: message_partner_ids -> res.partner (tabla: res_partner_res_partner_rel)
+[M2M] Archivo de importación existente: imports/import_res_partner_res_partner.json
+[M2M] No se exportará nuevamente
+[PASO 1/4] ✓ Tabla intermedia importada: imports/import_res_partner_res_partner.json
+[PASO 1/4] ✓ Cargados 31307 registros desde JSON
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[PASO 1/4] ✓ Encontrados 31310 registros ya migrados
+[PASO 2/4] ✓ Total de registros preparados: 0
+[PASO 2/4] ✓ Registros ya migrados (omitidos): 31307
+✓ TABLA res.partner - TODOS LOS REGISTROS YA ESTÁN MIGRADOS
+INICIANDO MIGRACIÓN DE TABLA: sale.subscription
+[CONTEO] Contando registros en v13 (modelo: contract.contract)...
+[CONTEO] ✓ Registros en v13: 6468
+[CONTEO] Contando registros en migration.tracking (v18)...
+[CONTEO] ✓ Registros en migration.tracking (v18): 0
+[CONTEO] ⚠ Faltan 6468 registros por migrar
+[PREPARACIÓN] Obteniendo campos almacenados para sale.subscription (v13: contract.contract)...
+  ⚠ Excluyendo campo many2one 'group_id' -> 'account.analytic.account' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'currency_id' -> 'res.currency' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'manual_currency_id' -> 'res.currency' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'contract_template_id' -> 'contract.template' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'user_id' -> 'res.users' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'payment_term_id' -> 'account.payment.term' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'fiscal_position_id' -> 'account.fiscal.position' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'terminate_reason_id' -> 'contract.terminate.reason' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'payment_mode_id' -> 'account.payment.mode' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'mandate_id' -> 'account.banking.mandate' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'platform_id' -> 'contract.api_platform' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'activity_user_id' -> 'res.users' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'activity_type_id' -> 'mail.activity.type' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'message_main_attachment_id' -> 'ir.attachment' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'journal_id' -> 'account.journal' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'create_uid' -> 'res.users' (no está en models_to_migrate.txt)
+  ⚠ Excluyendo campo many2one 'write_uid' -> 'res.users' (no está en models_to_migrate.txt)
+[PREPARACIÓN] ✓ Campos a exportar: 39
+[EXPORTACIÓN] ✓ Total de registros exportados: 6468
+[GUARDADO] ✓ Datos guardados en: imports/import_sale_subscription.json
+⚠ No se pudo obtener campos de sale.subscription: <Fault 2: "Object sale.subscription doesn't exist">
+[M2M] Archivo de importación existente: imports/import_res_partner_sale_subscription.json
+[M2M] No se exportará nuevamente
+[PASO 1/4] ✓ Tabla intermedia importada: imports/import_res_partner_sale_subscription.json
+[PASO 1/4] ✓ Cargados 6468 registros desde JSON
+[GET_MAPPING] ✓ Mapeo obtenido para sale.subscription: 0 registros mapeados
+[PASO 1/4] ✓ No hay registros migrados previamente
+[PASO 2/4] ✓ Total de registros preparados: 6468
+⚠ No se pudo obtener campos de sale.subscription: <Fault 2: "Object sale.subscription doesn't exist">
+[PASO 3/4] ✓ Ordenamiento completado
+[CREACIÓN] Total de batches: 7 (tamaño: 1000 registros por batch)
+[CREACIÓN] Batch 1/7 en proceso (1000 registros)...
+[MAPEO] Mapeando valores para batch 1/7...
+⚠ No se pudo obtener campos de sale.subscription: <Fault 2: "Object sale.subscription doesn't exist">
+[MAPEO] ✓ Valores mapeados para batch 1/7
+[PREPARACIÓN] Preparando registros para creación en batch 1/7...
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[55] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[55] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[66] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+  ⚠ [PRICELIST MAP] pricelist_id v13[55] no encontrado en mapeo de product.pricelist (58 mapeos disponibles)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para product.pricelist: 58 registros mapeados
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)
+[GET_MAPPING] ✓ Mapeo obtenido para res.partner: 31310 registros mapeados
+  ⚠ [VERIFICACIÓN FINAL] Campo requerido pricelist_id en sale.subscription sin mapeo, usando pricelist por defecto: 9 (Tarifa BOS Sureva)

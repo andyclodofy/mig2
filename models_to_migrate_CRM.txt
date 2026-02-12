@@ -1,0 +1,21 @@
+# ============================================
+# MIGRACIÓN CRM: Odoo v13 → v18
+# ============================================
+# Orden de migración (respetar dependencias):
+# 1. Etiquetas (sin dependencias)
+# 2. Razones de pérdida (sin dependencias)
+# 3. Equipos de ventas (depende de res.users)
+# 4. Etapas del pipeline (depende de crm.team)
+# 5. Oportunidades/Leads (depende de todo lo anterior)
+
+# PREREQUISITOS (deben estar migrados antes):
+# res.partner:True
+# res.users:True
+
+# MODELOS CRM
+crm.tag:True
+crm.lost.reason:True
+crm.team:True
+crm.stage:True
+crm.lead:True
+

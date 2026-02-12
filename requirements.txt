@@ -1,0 +1,3 @@
+# Dependencias para el script de migración
+# No se requieren dependencias adicionales, solo librerías estándar de Python
+

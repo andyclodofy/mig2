@@ -1,0 +1,43 @@
+{
+  "id": 1,
+  "name": "All",
+  "complete_name": "All",
+  "parent_id": false,
+  "parent_path": "1/",
+  "child_id": [
+    3,
+    2
+  ],
+  "product_count": 7,
+  "route_ids": [],
+  "removal_strategy_id": false,
+  "total_route_ids": [],
+  "putaway_rule_ids": [],
+  "property_account_income_categ_id": [
+    481,
+    "700000 Ventas de mercaderías en España"
+  ],
+  "property_account_expense_categ_id": [
+    357,
+    "600000 Compras de mercaderías"
+  ],
+  "property_cost_method": "standard",
+  "property_stock_journal": [
+    9,
+    "Valoración del inventario (EUR)"
+  ],
+  "property_stock_account_input_categ_id": false,
+  "property_stock_account_output_categ_id": false,
+  "display_name": "All",
+  "create_uid": [
+    1,
+    "OdooBot"
+  ],
+  "create_date": "2021-07-01 07:22:35",
+  "write_uid": [
+    1,
+    "OdooBot"
+  ],
+  "write_date": "2021-07-01 07:22:35",
+  "__last_update": "2021-07-01 07:22:35"
+}

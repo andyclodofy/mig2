@@ -1,0 +1,148 @@
+{
+  "model": "product.pricelist.item",
+  "v13_count": 183,
+  "v18_count": 0,
+  "v13_required_fields": {
+    "applied_on": {
+      "type": "selection",
+      "string": "Apply On",
+      "default": null
+    },
+    "base": {
+      "type": "selection",
+      "string": "Based on",
+      "default": null
+    },
+    "pricelist_id": {
+      "type": "many2one",
+      "string": "Pricelist",
+      "default": null
+    },
+    "compute_price": {
+      "type": "selection",
+      "string": "Compute Price",
+      "default": null
+    }
+  },
+  "v18_required_fields": {
+    "pricelist_id": {
+      "type": "many2one",
+      "string": "Pricelist",
+      "default": null
+    },
+    "applied_on": {
+      "type": "selection",
+      "string": "Apply On",
+      "default": null
+    },
+    "display_applied_on": {
+      "type": "selection",
+      "string": "Display Applied On",
+      "default": null
+    },
+    "base": {
+      "type": "selection",
+      "string": "Based on",
+      "default": null
+    },
+    "compute_price": {
+      "type": "selection",
+      "string": "Compute Price",
+      "default": null
+    }
+  },
+  "new_required_in_v18": [
+    "display_applied_on"
+  ],
+  "removed_required_in_v18": [],
+  "v13_many2one_fields": {
+    "product_tmpl_id": {
+      "relation": "product.template",
+      "string": "Product"
+    },
+    "product_id": {
+      "relation": "product.product",
+      "string": "Product Variant"
+    },
+    "categ_id": {
+      "relation": "product.category",
+      "string": "Product Category"
+    },
+    "base_pricelist_id": {
+      "relation": "product.pricelist",
+      "string": "Other Pricelist"
+    },
+    "pricelist_id": {
+      "relation": "product.pricelist",
+      "string": "Pricelist"
+    },
+    "company_id": {
+      "relation": "res.company",
+      "string": "Company"
+    },
+    "currency_id": {
+      "relation": "res.currency",
+      "string": "Currency"
+    },
+    "create_uid": {
+      "relation": "res.users",
+      "string": "Created by"
+    },
+    "write_uid": {
+      "relation": "res.users",
+      "string": "Last Updated by"
+    }
+  },
+  "v18_many2one_fields": {
+    "pricelist_id": {
+      "relation": "product.pricelist",
+      "string": "Pricelist"
+    },
+    "company_id": {
+      "relation": "res.company",
+      "string": "Company"
+    },
+    "currency_id": {
+      "relation": "res.currency",
+      "string": "Currency"
+    },
+    "categ_id": {
+      "relation": "product.category",
+      "string": "Category"
+    },
+    "product_tmpl_id": {
+      "relation": "product.template",
+      "string": "Product"
+    },
+    "product_id": {
+      "relation": "product.product",
+      "string": "Variant"
+    },
+    "base_pricelist_id": {
+      "relation": "product.pricelist",
+      "string": "Other Pricelist"
+    },
+    "create_uid": {
+      "relation": "res.users",
+      "string": "Created by"
+    },
+    "write_uid": {
+      "relation": "res.users",
+      "string": "Last Updated by"
+    }
+  },
+  "v13_computed_fields": [
+    "name",
+    "price",
+    "display_name",
+    "__last_update"
+  ],
+  "v18_computed_fields": [
+    "product_uom",
+    "product_variant_count",
+    "name",
+    "price",
+    "rule_tip",
+    "display_name"
+  ]
+}

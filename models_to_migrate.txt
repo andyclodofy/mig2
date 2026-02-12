@@ -1,0 +1,59 @@
+# ============================================
+# MIGRACIÓN ODOO v13 → v18
+# ============================================
+# Orden de migración (respetar dependencias)
+# Formato: modelo:allow_many2one
+# - True: Incluye campos many2one
+# - False: No incluye campos many2one
+
+# ============================================
+# MODELOS BASE (PREREQUISITOS)
+# ============================================
+# Orden de migración:
+# 1. Categorías de partners (sin dependencias)
+# 2. Partners (depende de: res.partner.category)
+# 3. Usuarios (depende de: res.partner)
+res.partner.category:True
+res.partner:False
+res.users:True
+
+# ============================================
+# MODELOS DE PRODUCTOS
+# ============================================
+# PREREQUISITOS: res.currency, uom.category y uom.uom deben estar migrados
+# Orden de migración de productos:
+# 1. Categorías de unidades de medida (uom.category) - REQUERIDO para uom.uom
+# 2. Unidades de medida (uom.uom) - REQUERIDO para product.template
+# 3. Categorías de productos (depende de: ninguna)
+# 4. Plantillas de productos (depende de: product.category, uom.uom)
+# 5. Productos (depende de: product.template)
+# 6. Listas de precios (depende de: res.currency)
+# 7. Items de lista de precios (depende de: product.pricelist, product.template, product.product, product.category)
+
+uom.category:True
+uom.uom:True
+product.category:True
+product.template:True
+product.product:True
+product.pricelist:True
+product.pricelist.item:True
+
+# ============================================
+# MODELOS CRM
+# ============================================
+# PREREQUISITOS: res.partner y res.users deben estar migrados
+crm.tag:True
+crm.lost.reason:True
+crm.team:True
+crm.stage:True
+crm.lead:True
+
+# ============================================
+# MODELOS DE SUSCRIPCIONES (CONTRATOS)
+# ============================================
+# PREREQUISITOS: res.partner, product.pricelist, res.currency, sale.subscription.template deben estar disponibles
+# Orden de migración:
+# 1. Suscripciones (depende de: res.partner, product.pricelist, sale.subscription.template)
+# 2. Líneas de suscripción (depende de: sale.subscription, product.product)
+sale.subscription:True
+sale.subscription.line:True

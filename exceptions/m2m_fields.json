@@ -1,0 +1,18 @@
+{
+  "res.partner": {
+    "category_id": {
+      "description": "Campo many2many category_id para res.partner. Solo este campo debe procesarse para relaciones many2many desde imports."
+    }
+  },
+  "crm.lead": {
+    "tag_ids": {
+      "description": "Etiquetas CRM para oportunidades. Relación many2many con crm.tag. Se aplicará después de migrar crm.lead y crm.tag"
+    }
+  },
+  "crm.team": {
+    "member_ids": {
+      "description": "Miembros del equipo de ventas. Relación many2many con res.users. Se aplicará después de migrar crm.team y res.users"
+    }
+  }
+}
+

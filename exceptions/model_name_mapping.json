@@ -1,0 +1,32 @@
+{
+  "description": "Mapeo de nombres de modelos entre v13 y v18. Si un modelo cambió de nombre entre versiones, especificar el nombre en v13 aquí.",
+  "v13_to_v18": {
+    "crm.lead.tag": {
+      "v18_name": "crm.tag",
+      "description": "En v13 se llamaba crm.lead.tag, en v18 se renombró a crm.tag"
+    },
+    "contract.contract": {
+      "v18_name": "sale.subscription",
+      "description": "En v13 se llamaba contract.contract, en v18 se renombró a sale.subscription"
+    },
+    "contract.line": {
+      "v18_name": "sale.subscription.line",
+      "description": "En v13 se llamaba contract.line, en v18 se renombró a sale.subscription.line"
+    }
+  },
+  "v18_to_v13": {
+    "crm.tag": {
+      "v13_name": "crm.lead.tag",
+      "description": "En v18 se llama crm.tag, en v13 se llamaba crm.lead.tag"
+    },
+    "sale.subscription": {
+      "v13_name": "contract.contract",
+      "description": "En v18 se llama sale.subscription, en v13 se llamaba contract.contract"
+    },
+    "sale.subscription.line": {
+      "v13_name": "contract.line",
+      "description": "En v18 se llama sale.subscription.line, en v13 se llamaba contract.line"
+    }
+  }
+}
+

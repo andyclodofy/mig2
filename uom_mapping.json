@@ -1,0 +1,365 @@
+{
+  "mapping": {
+    "5": 3,
+    "2": 2,
+    "6": 4,
+    "10": 8,
+    "4": 13,
+    "3": 12,
+    "9": 7,
+    "8": 5,
+    "7": 14,
+    "22": 22,
+    "25": 25,
+    "24": 24,
+    "11": 11,
+    "1": 1,
+    "17": 17,
+    "15": 15,
+    "19": 19,
+    "14": 14,
+    "12": 12,
+    "16": 16,
+    "13": 13,
+    "18": 18,
+    "28": 42,
+    "29": 44,
+    "55": 36,
+    "46": 37,
+    "57": 40,
+    "39": 47,
+    "31": 48
+  },
+  "matches_by_name": [
+    {
+      "name": "days",
+      "v13_id": 5,
+      "v13_name": "Days",
+      "v18_id": 3,
+      "v18_name": "Days"
+    },
+    {
+      "name": "dozens",
+      "v13_id": 2,
+      "v13_name": "Dozens",
+      "v18_id": 2,
+      "v18_name": "Dozens"
+    },
+    {
+      "name": "hours",
+      "v13_id": 6,
+      "v13_name": "Hours",
+      "v18_id": 4,
+      "v18_name": "Hours"
+    },
+    {
+      "name": "cm",
+      "v13_id": 10,
+      "v13_name": "cm",
+      "v18_id": 8,
+      "v18_name": "cm"
+    },
+    {
+      "name": "g",
+      "v13_id": 4,
+      "v13_name": "g",
+      "v18_id": 13,
+      "v18_name": "g"
+    },
+    {
+      "name": "kg",
+      "v13_id": 3,
+      "v13_name": "kg",
+      "v18_id": 12,
+      "v18_name": "kg"
+    },
+    {
+      "name": "km",
+      "v13_id": 9,
+      "v13_name": "km",
+      "v18_id": 7,
+      "v18_name": "km"
+    },
+    {
+      "name": "m",
+      "v13_id": 8,
+      "v13_name": "m",
+      "v18_id": 5,
+      "v18_name": "m"
+    },
+    {
+      "name": "t",
+      "v13_id": 7,
+      "v13_name": "t",
+      "v18_id": 14,
+      "v18_name": "t"
+    }
+  ],
+  "matches_by_id": [
+    {
+      "id": 22,
+      "v13_name": "Anual",
+      "v18_name": "fl oz (US)"
+    },
+    {
+      "id": 25,
+      "v13_name": "Año SD",
+      "v18_name": "in³"
+    },
+    {
+      "id": 24,
+      "v13_name": "Cargo Único",
+      "v18_name": "gal (US)"
+    },
+    {
+      "id": 11,
+      "v13_name": "Liters",
+      "v18_name": "m³"
+    },
+    {
+      "id": 1,
+      "v13_name": "Unidades/Mes",
+      "v18_name": "Units"
+    },
+    {
+      "id": 17,
+      "v13_name": "fl oz",
+      "v18_name": "in"
+    },
+    {
+      "id": 15,
+      "v13_name": "foot(ft)",
+      "v18_name": "lb"
+    },
+    {
+      "id": 19,
+      "v13_name": "gals",
+      "v18_name": "yd"
+    },
+    {
+      "id": 14,
+      "v13_name": "inches",
+      "v18_name": "t"
+    },
+    {
+      "id": 12,
+      "v13_name": "lbs",
+      "v18_name": "kg"
+    },
+    {
+      "id": 16,
+      "v13_name": "miles",
+      "v18_name": "oz"
+    },
+    {
+      "id": 13,
+      "v13_name": "ozs",
+      "v18_name": "g"
+    },
+    {
+      "id": 18,
+      "v13_name": "qt",
+      "v18_name": "ft"
+    }
+  ],
+  "unmatched_v13": [
+    {
+      "id": 28,
+      "name": "Gigas",
+      "category_id": [
+        8,
+        "Almacenamiento Virtual"
+      ],
+      "uom_type": "reference",
+      "active": true
+    },
+    {
+      "id": 29,
+      "name": "Teras",
+      "category_id": [
+        8,
+        "Almacenamiento Virtual"
+      ],
+      "uom_type": "bigger",
+      "active": true
+    },
+    {
+      "id": 55,
+      "name": "Unidades/Año",
+      "category_id": [
+        1,
+        "Unit"
+      ],
+      "uom_type": "bigger",
+      "active": true
+    },
+    {
+      "id": 46,
+      "name": "Unidades/Día",
+      "category_id": [
+        1,
+        "Unit"
+      ],
+      "uom_type": "smaller",
+      "active": true
+    },
+    {
+      "id": 39,
+      "name": "Unidades/Día",
+      "category_id": [
+        2,
+        "Weight"
+      ],
+      "uom_type": "bigger",
+      "active": true
+    },
+    {
+      "id": 31,
+      "name": "Unidades/Día",
+      "category_id": [
+        9,
+        "Unsorted/Imported Units"
+      ],
+      "uom_type": "reference",
+      "active": true
+    },
+    {
+      "id": 57,
+      "name": "Unidades/Semana",
+      "category_id": [
+        11,
+        "Semanal"
+      ],
+      "uom_type": "reference",
+      "active": true
+    }
+  ],
+  "unmatched_v18": [
+    {
+      "id": 6,
+      "name": "mm",
+      "category_id": [
+        4,
+        "Length / Distance"
+      ],
+      "uom_type": "smaller",
+      "active": true
+    },
+    {
+      "id": 21,
+      "name": "ft²",
+      "category_id": [
+        5,
+        "Surface"
+      ],
+      "uom_type": "smaller",
+      "active": true
+    },
+    {
+      "id": 23,
+      "name": "qt (US)",
+      "category_id": [
+        6,
+        "Volume"
+      ],
+      "uom_type": "smaller",
+      "active": true
+    },
+    {
+      "id": 9,
+      "name": "m²",
+      "category_id": [
+        5,
+        "Surface"
+      ],
+      "uom_type": "reference",
+      "active": true
+    },
+    {
+      "id": 10,
+      "name": "L",
+      "category_id": [
+        6,
+        "Volume"
+      ],
+      "uom_type": "reference",
+      "active": true
+    },
+    {
+      "id": 26,
+      "name": "ft³",
+      "category_id": [
+        6,
+        "Volume"
+      ],
+      "uom_type": "bigger",
+      "active": true
+    },
+    {
+      "id": 20,
+      "name": "mi",
+      "category_id": [
+        4,
+        "Length / Distance"
+      ],
+      "uom_type": "bigger",
+      "active": true
+    }
+  ],
+  "summary": {
+    "total_v13": 29,
+    "total_v18": 26,
+    "matched": 22,
+    "unmatched_v13": 7,
+    "unmatched_v18": 7
+  },
+  "created_units": [
+    {
+      "v13_id": 55,
+      "v13_name": "Unidades/Año",
+      "v18_id": 36,
+      "v18_name": "Unidades/Año",
+      "category_id": 7
+    },
+    {
+      "v13_id": 46,
+      "v13_name": "Unidades/Día",
+      "v18_id": 37,
+      "v18_name": "Unidades/Día",
+      "category_id": 8
+    },
+    {
+      "v13_id": 57,
+      "v13_name": "Unidades/Semana",
+      "v18_id": 40,
+      "v18_name": "Unidades/Semana",
+      "category_id": 9
+    },
+    {
+      "v13_id": 28,
+      "v13_name": "Gigas",
+      "v18_id": 42,
+      "v18_name": "Gigas"
+    },
+    {
+      "v13_id": 29,
+      "v13_name": "Teras",
+      "v18_id": 44,
+      "v18_name": "Teras"
+    },
+    {
+      "v13_id": 39,
+      "v13_name": "Unidades/Día",
+      "v18_id": 47,
+      "v18_name": "Unidades/Día",
+      "category_id": 12
+    },
+    {
+      "v13_id": 31,
+      "v13_name": "Unidades/Día",
+      "v18_id": 48,
+      "v18_name": "Unidades/Día",
+      "category_id": 13
+    }
+  ]
+}

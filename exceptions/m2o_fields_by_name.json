@@ -1,0 +1,33 @@
+{
+  "res.partner": {
+    "state_id": {
+      "model": "res.country.state",
+      "search_field": "name",
+      "create_if_not_exists": true,
+      "description": "Campo many2one state_id para res.partner. Se busca por nombre y se crea si no existe."
+    },
+    "country_id": {
+      "model": "res.country",
+      "search_field": "name",
+      "create_if_not_exists": true,
+      "description": "Campo many2one country_id para res.partner. Se importa para poder usarlo al crear res.country.state."
+    }
+  },
+  "crm.lead": {
+    "lost_reason_id": {
+      "model": "crm.lost.reason",
+      "search_field": "name",
+      "create_if_not_exists": false,
+      "description": "Razón de pérdida de oportunidad. Solo buscar, no crear."
+    }
+  },
+  "crm.stage": {
+    "team_id": {
+      "model": "crm.team",
+      "search_field": "name",
+      "create_if_not_exists": false,
+      "description": "Equipo de ventas para la etapa. Solo buscar, no crear."
+    }
+  }
+}
+

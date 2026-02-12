@@ -1,0 +1,30 @@
+{
+  "v13_currencies": [
+    {
+      "id": 1,
+      "name": "EUR",
+      "symbol": "€",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "USD",
+      "symbol": "$",
+      "active": true
+    }
+  ],
+  "v18_currencies": [
+    {
+      "id": 125,
+      "name": "EUR",
+      "symbol": "€",
+      "active": true
+    },
+    {
+      "id": 1,
+      "name": "USD",
+      "symbol": "$",
+      "active": true
+    }
+  ]
+}

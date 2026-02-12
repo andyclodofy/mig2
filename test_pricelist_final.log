@@ -1,0 +1,1 @@
+timeout: failed to run command ‘MIGRATE_MODEL=res.partner,product.pricelist,sale.subscription’: No such file or directory

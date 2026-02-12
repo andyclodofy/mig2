@@ -1,0 +1,851 @@
+{
+  "v13_contract": {
+    "model": "contract.contract",
+    "total_fields": 60,
+    "required_fields": [
+      "partner_id",
+      "name",
+      "company_id"
+    ],
+    "stored_fields": {
+      "active": {
+        "type": "boolean",
+        "required": false
+      },
+      "code": {
+        "type": "char",
+        "required": false
+      },
+      "group_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "manual_currency_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "contract_template_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "contract_line_fixed_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "user_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "date_end": {
+        "type": "date",
+        "required": false
+      },
+      "payment_term_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "fiscal_position_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "invoice_partner_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "partner_id": {
+        "type": "many2one",
+        "required": true
+      },
+      "tag_ids": {
+        "type": "many2many",
+        "required": false
+      },
+      "note": {
+        "type": "text",
+        "required": false
+      },
+      "is_terminated": {
+        "type": "boolean",
+        "required": false
+      },
+      "terminate_reason_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "terminate_comment": {
+        "type": "text",
+        "required": false
+      },
+      "terminate_date": {
+        "type": "date",
+        "required": false
+      },
+      "modification_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "payment_mode_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "mandate_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "commercial_partner_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "platform_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "responsable_distributor_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "distributor_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "is_client_invoiced_contract": {
+        "type": "boolean",
+        "required": false
+      },
+      "default_invoicing_day": {
+        "type": "integer",
+        "required": false
+      },
+      "recurrence": {
+        "type": "selection",
+        "required": false
+      },
+      "recurrence_amount": {
+        "type": "integer",
+        "required": false
+      },
+      "contract_line_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "amount_lines": {
+        "type": "integer",
+        "required": false
+      },
+      "common_storage_invoice_by_contract": {
+        "type": "boolean",
+        "required": false
+      },
+      "origin_contract_id": {
+        "type": "integer",
+        "required": false
+      },
+      "origin_partner_name": {
+        "type": "char",
+        "required": false
+      },
+      "origin_partner_vat": {
+        "type": "char",
+        "required": false
+      },
+      "origin_partner_distributor": {
+        "type": "char",
+        "required": false
+      },
+      "activity_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "message_follower_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "message_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "message_main_attachment_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "website_message_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "access_token": {
+        "type": "char",
+        "required": false
+      },
+      "last_date_invoiced": {
+        "type": "date",
+        "required": false
+      },
+      "name": {
+        "type": "char",
+        "required": true
+      },
+      "pricelist_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "contract_type": {
+        "type": "selection",
+        "required": false
+      },
+      "journal_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "company_id": {
+        "type": "many2one",
+        "required": true
+      },
+      "line_recurrence": {
+        "type": "boolean",
+        "required": false
+      },
+      "recurring_rule_type": {
+        "type": "selection",
+        "required": false
+      },
+      "recurring_invoicing_type": {
+        "type": "selection",
+        "required": false
+      },
+      "recurring_interval": {
+        "type": "integer",
+        "required": false
+      },
+      "date_start": {
+        "type": "date",
+        "required": false
+      },
+      "recurring_next_date": {
+        "type": "date",
+        "required": false
+      },
+      "id": {
+        "type": "integer",
+        "required": false
+      },
+      "create_uid": {
+        "type": "many2one",
+        "required": false
+      },
+      "create_date": {
+        "type": "datetime",
+        "required": false
+      },
+      "write_uid": {
+        "type": "many2one",
+        "required": false
+      },
+      "write_date": {
+        "type": "datetime",
+        "required": false
+      },
+      "x_contract_archivation_date": {
+        "type": "datetime",
+        "required": false
+      }
+    }
+  },
+  "v18_subscription": {
+    "model": "sale.subscription",
+    "total_fields": 42,
+    "required_fields": [
+      "company_id",
+      "partner_id",
+      "template_id",
+      "pricelist_id"
+    ],
+    "stored_fields": {
+      "activity_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "message_follower_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "message_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "website_message_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "color": {
+        "type": "integer",
+        "required": false
+      },
+      "name": {
+        "type": "char",
+        "required": false
+      },
+      "sequence": {
+        "type": "integer",
+        "required": false
+      },
+      "company_id": {
+        "type": "many2one",
+        "required": true
+      },
+      "partner_id": {
+        "type": "many2one",
+        "required": true
+      },
+      "fiscal_position_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "active": {
+        "type": "boolean",
+        "required": false
+      },
+      "template_id": {
+        "type": "many2one",
+        "required": true
+      },
+      "code": {
+        "type": "char",
+        "required": false
+      },
+      "in_progress": {
+        "type": "boolean",
+        "required": false
+      },
+      "recurring_rule_boundary": {
+        "type": "boolean",
+        "required": false
+      },
+      "pricelist_id": {
+        "type": "many2one",
+        "required": true
+      },
+      "recurring_next_date": {
+        "type": "date",
+        "required": false
+      },
+      "user_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "date_start": {
+        "type": "date",
+        "required": false
+      },
+      "date": {
+        "type": "date",
+        "required": false
+      },
+      "description": {
+        "type": "text",
+        "required": false
+      },
+      "sale_order_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "terms": {
+        "type": "text",
+        "required": false
+      },
+      "invoice_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "sale_order_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "recurring_total": {
+        "type": "monetary",
+        "required": false
+      },
+      "amount_tax": {
+        "type": "monetary",
+        "required": false
+      },
+      "amount_total": {
+        "type": "monetary",
+        "required": false
+      },
+      "tag_ids": {
+        "type": "many2many",
+        "required": false
+      },
+      "image": {
+        "type": "binary",
+        "required": false
+      },
+      "journal_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "currency_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "stage_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "sale_subscription_line_ids": {
+        "type": "one2many",
+        "required": false
+      },
+      "close_reason_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "crm_team_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "to_renew": {
+        "type": "boolean",
+        "required": false
+      },
+      "id": {
+        "type": "integer",
+        "required": false
+      },
+      "create_uid": {
+        "type": "many2one",
+        "required": false
+      },
+      "create_date": {
+        "type": "datetime",
+        "required": false
+      },
+      "write_uid": {
+        "type": "many2one",
+        "required": false
+      },
+      "write_date": {
+        "type": "datetime",
+        "required": false
+      }
+    }
+  },
+  "v13_line": {
+    "model": "contract.line",
+    "total_fields": 44,
+    "required_fields": [
+      "contract_id",
+      "date_start",
+      "name",
+      "quantity",
+      "recurring_rule_type",
+      "recurring_invoicing_type",
+      "recurring_interval"
+    ],
+    "stored_fields": {
+      "sequence": {
+        "type": "integer",
+        "required": false
+      },
+      "contract_id": {
+        "type": "many2one",
+        "required": true
+      },
+      "analytic_account_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "analytic_tag_ids": {
+        "type": "many2many",
+        "required": false
+      },
+      "date_start": {
+        "type": "date",
+        "required": true
+      },
+      "date_end": {
+        "type": "date",
+        "required": false
+      },
+      "termination_notice_date": {
+        "type": "date",
+        "required": false
+      },
+      "successor_contract_line_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "predecessor_contract_line_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "manual_renew_needed": {
+        "type": "boolean",
+        "required": false
+      },
+      "active": {
+        "type": "boolean",
+        "required": false
+      },
+      "api_contract_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "user_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "contract_client_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "product_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "platform_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "is_automatically_created": {
+        "type": "boolean",
+        "required": false
+      },
+      "new_invoice_date": {
+        "type": "date",
+        "required": false
+      },
+      "contract_main_distributor": {
+        "type": "many2one",
+        "required": false
+      },
+      "name": {
+        "type": "text",
+        "required": true
+      },
+      "quantity": {
+        "type": "float",
+        "required": true
+      },
+      "uom_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "automatic_price": {
+        "type": "boolean",
+        "required": false
+      },
+      "specific_price": {
+        "type": "float",
+        "required": false
+      },
+      "discount": {
+        "type": "float",
+        "required": false
+      },
+      "recurring_rule_type": {
+        "type": "selection",
+        "required": true
+      },
+      "recurring_invoicing_type": {
+        "type": "selection",
+        "required": true
+      },
+      "recurring_interval": {
+        "type": "integer",
+        "required": true
+      },
+      "last_date_invoiced": {
+        "type": "date",
+        "required": false
+      },
+      "is_canceled": {
+        "type": "boolean",
+        "required": false
+      },
+      "is_auto_renew": {
+        "type": "boolean",
+        "required": false
+      },
+      "auto_renew_interval": {
+        "type": "integer",
+        "required": false
+      },
+      "auto_renew_rule_type": {
+        "type": "selection",
+        "required": false
+      },
+      "termination_notice_interval": {
+        "type": "integer",
+        "required": false
+      },
+      "termination_notice_rule_type": {
+        "type": "selection",
+        "required": false
+      },
+      "display_type": {
+        "type": "selection",
+        "required": false
+      },
+      "note_invoicing_mode": {
+        "type": "selection",
+        "required": false
+      },
+      "company_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "recurring_next_date": {
+        "type": "date",
+        "required": false
+      },
+      "id": {
+        "type": "integer",
+        "required": false
+      },
+      "create_uid": {
+        "type": "many2one",
+        "required": false
+      },
+      "create_date": {
+        "type": "datetime",
+        "required": false
+      },
+      "write_uid": {
+        "type": "many2one",
+        "required": false
+      },
+      "write_date": {
+        "type": "datetime",
+        "required": false
+      }
+    }
+  },
+  "v18_line": {
+    "model": "sale.subscription.line",
+    "total_fields": 18,
+    "required_fields": [],
+    "stored_fields": {
+      "analytic_distribution": {
+        "type": "json",
+        "required": false
+      },
+      "product_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "currency_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "name": {
+        "type": "char",
+        "required": false
+      },
+      "product_uom_qty": {
+        "type": "float",
+        "required": false
+      },
+      "price_unit": {
+        "type": "float",
+        "required": false
+      },
+      "discount": {
+        "type": "float",
+        "required": false
+      },
+      "tax_ids": {
+        "type": "many2many",
+        "required": false
+      },
+      "price_subtotal": {
+        "type": "monetary",
+        "required": false
+      },
+      "price_total": {
+        "type": "monetary",
+        "required": false
+      },
+      "amount_tax_line_amount": {
+        "type": "float",
+        "required": false
+      },
+      "sale_subscription_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "company_id": {
+        "type": "many2one",
+        "required": false
+      },
+      "id": {
+        "type": "integer",
+        "required": false
+      },
+      "create_uid": {
+        "type": "many2one",
+        "required": false
+      },
+      "create_date": {
+        "type": "datetime",
+        "required": false
+      },
+      "write_uid": {
+        "type": "many2one",
+        "required": false
+      },
+      "write_date": {
+        "type": "datetime",
+        "required": false
+      }
+    }
+  },
+  "comparison": {
+    "common_fields": [
+      "pricelist_id",
+      "tag_ids",
+      "company_id",
+      "partner_id",
+      "message_follower_ids",
+      "user_id",
+      "write_date",
+      "code",
+      "recurring_next_date",
+      "name",
+      "journal_id",
+      "create_date",
+      "website_message_ids",
+      "message_ids",
+      "date_start",
+      "id",
+      "fiscal_position_id",
+      "activity_ids",
+      "write_uid",
+      "active",
+      "create_uid"
+    ],
+    "only_v13": [
+      "is_client_invoiced_contract",
+      "contract_template_id",
+      "date_end",
+      "x_contract_archivation_date",
+      "modification_ids",
+      "note",
+      "platform_id",
+      "contract_line_fixed_ids",
+      "contract_type",
+      "commercial_partner_id",
+      "origin_partner_distributor",
+      "distributor_id",
+      "terminate_date",
+      "origin_partner_vat",
+      "group_id",
+      "recurring_invoicing_type",
+      "manual_currency_id",
+      "responsable_distributor_id",
+      "recurring_interval",
+      "recurrence_amount",
+      "amount_lines",
+      "origin_partner_name",
+      "message_main_attachment_id",
+      "terminate_comment",
+      "access_token",
+      "origin_contract_id",
+      "payment_term_id",
+      "invoice_partner_id",
+      "contract_line_ids",
+      "recurrence",
+      "line_recurrence",
+      "common_storage_invoice_by_contract",
+      "last_date_invoiced",
+      "is_terminated",
+      "terminate_reason_id",
+      "payment_mode_id",
+      "default_invoicing_day",
+      "recurring_rule_type",
+      "mandate_id"
+    ],
+    "only_v18": [
+      "currency_id",
+      "date",
+      "sale_order_ids",
+      "amount_total",
+      "sequence",
+      "recurring_rule_boundary",
+      "sale_subscription_line_ids",
+      "image",
+      "amount_tax",
+      "crm_team_id",
+      "template_id",
+      "to_renew",
+      "close_reason_id",
+      "sale_order_id",
+      "in_progress",
+      "stage_id",
+      "description",
+      "recurring_total",
+      "terms",
+      "color",
+      "invoice_ids"
+    ],
+    "common_line_fields": [
+      "id",
+      "discount",
+      "company_id",
+      "write_uid",
+      "product_id",
+      "write_date",
+      "name",
+      "create_uid",
+      "create_date"
+    ],
+    "only_v13_line": [
+      "new_invoice_date",
+      "date_end",
+      "termination_notice_date",
+      "platform_id",
+      "is_canceled",
+      "quantity",
+      "user_id",
+      "display_type",
+      "predecessor_contract_line_id",
+      "auto_renew_rule_type",
+      "recurring_invoicing_type",
+      "api_contract_id",
+      "contract_id",
+      "recurring_interval",
+      "sequence",
+      "analytic_account_id",
+      "specific_price",
+      "is_automatically_created",
+      "termination_notice_interval",
+      "auto_renew_interval",
+      "automatic_price",
+      "recurring_next_date",
+      "analytic_tag_ids",
+      "date_start",
+      "last_date_invoiced",
+      "contract_client_id",
+      "is_auto_renew",
+      "manual_renew_needed",
+      "active",
+      "uom_id",
+      "note_invoicing_mode",
+      "successor_contract_line_id",
+      "recurring_rule_type",
+      "termination_notice_rule_type",
+      "contract_main_distributor"
+    ],
+    "only_v18_line": [
+      "amount_tax_line_amount",
+      "price_total",
+      "analytic_distribution",
+      "product_uom_qty",
+      "tax_ids",
+      "currency_id",
+      "price_unit",
+      "price_subtotal",
+      "sale_subscription_id"
+    ]
+  }
+}

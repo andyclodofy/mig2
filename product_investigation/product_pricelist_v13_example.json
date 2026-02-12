@@ -1,0 +1,42 @@
+{
+  "id": 48,
+  "name": "Tarifa BOS Sureva",
+  "active": true,
+  "item_ids": [
+    171,
+    173,
+    174,
+    175,
+    176,
+    170,
+    177,
+    169,
+    168,
+    167,
+    165,
+    164
+  ],
+  "currency_id": [
+    1,
+    "EUR"
+  ],
+  "company_id": false,
+  "sequence": 1,
+  "country_group_ids": [],
+  "discount_policy": "with_discount",
+  "website_id": false,
+  "code": false,
+  "selectable": true,
+  "display_name": "Tarifa BOS Sureva (EUR)",
+  "create_uid": [
+    6,
+    "Justino Dominguez"
+  ],
+  "create_date": "2022-09-24 14:31:05",
+  "write_uid": [
+    6,
+    "Justino Dominguez"
+  ],
+  "write_date": "2022-09-25 09:06:32",
+  "__last_update": "2022-09-25 09:06:32"
+}

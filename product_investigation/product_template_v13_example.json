@@ -1,0 +1,79 @@
+{
+  "id": 403,
+  "name": " Servidor Virtual de 2 cores, 4 GB de RAM y 100GB HDD",
+  "sequence": 1,
+  "description": "Importardo",
+  "description_purchase": false,
+  "description_sale": false,
+  "rental": false,
+  "categ_id": [
+    10,
+    "VPS"
+  ],
+  "currency_id": [
+    1,
+    "EUR"
+  ],
+  "cost_currency_id": [
+    1,
+    "EUR"
+  ],
+  "price": 0.0,
+  "list_price": 47.57,
+  "lst_price": 47.57,
+  "standard_price": 0.0,
+  "volume": 0.0,
+  "volume_uom_name": "m³",
+  "weight": 0.0,
+  "weight_uom_name": "kg",
+  "sale_ok": true,
+  "purchase_ok": true,
+  "pricelist_id": false,
+  "uom_id": [
+    1,
+    "Unidades/Mes"
+  ],
+  "uom_name": "Unidades/Mes",
+  "uom_po_id": [
+    1,
+    "Unidades/Mes"
+  ],
+  "company_id": false,
+  "packaging_ids": [],
+  "seller_ids": [],
+  "variant_seller_ids": [],
+  "active": true,
+  "color": 0,
+  "is_product_variant": false,
+  "attribute_line_ids": [],
+  "valid_product_template_attribute_line_ids": [],
+  "product_variant_ids": [
+    403
+  ],
+  "product_variant_id": [
+    403,
+    "[D101 - VPS]  Servidor Virtual de 2 cores, 4 GB de RAM y 100GB HDD"
+  ],
+  "product_variant_count": 1,
+  "barcode": false,
+  "default_code": "D101 - VPS",
+  "pricelist_item_count": 0,
+  "can_image_1024_be_zoomed": false,
+  "has_configurable_attributes": false,
+  "rating_ids": [],
+  "rating_last_value": 0.0,
+  "rating_last_feedback": false,
+  "rating_last_image": false,
+  "rating_count": 0,
+  "rating_avg": 0.0,
+  "responsible_id": false,
+  "type": "service",
+  "property_stock_production": [
+    15,
+    "Virtual Locations/Cloud 101, S.L. IMP: Production"
+  ],
+  "property_stock_inventory": [
+    14,
+    "Virtual Locations/Cloud 101, S.L. IMP: Inventory adjustment"
+  ]
+}

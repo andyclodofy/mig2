@@ -1,0 +1,68 @@
+{
+  "id": 400,
+  "image_1920": false,
+  "image_1024": false,
+  "image_512": false,
+  "image_256": false,
+  "image_128": false,
+  "activity_ids": [],
+  "activity_state": false,
+  "activity_user_id": false,
+  "activity_type_id": false,
+  "activity_type_icon": false,
+  "activity_date_deadline": false,
+  "my_activity_date_deadline": false,
+  "activity_summary": false,
+  "activity_exception_decoration": false,
+  "activity_exception_icon": false,
+  "activity_calendar_event_id": false,
+  "message_is_follower": false,
+  "message_follower_ids": [],
+  "message_partner_ids": [],
+  "message_ids": [],
+  "has_message": false,
+  "message_needaction": false,
+  "message_needaction_counter": 0,
+  "message_has_error": false,
+  "message_has_error_counter": 0,
+  "message_attachment_count": 0,
+  "website_message_ids": [],
+  "message_has_sms_error": false,
+  "name": " Key kDOSi-3WIyH-1q005-5sozI-Xw",
+  "sequence": 1,
+  "description": false,
+  "description_purchase": false,
+  "description_sale": false,
+  "type": "service",
+  "combo_ids": [],
+  "service_tracking": "no",
+  "categ_id": [
+    4,
+    "B&DRP"
+  ],
+  "currency_id": [
+    125,
+    "EUR"
+  ],
+  "cost_currency_id": [
+    125,
+    "EUR"
+  ],
+  "list_price": 1.0,
+  "standard_price": 0.0,
+  "volume": 0.0,
+  "volume_uom_name": "m³",
+  "weight": 0.0,
+  "weight_uom_name": "kg",
+  "sale_ok": true,
+  "purchase_ok": true,
+  "uom_id": [
+    1,
+    "Units"
+  ],
+  "uom_name": "Units",
+  "uom_category_id": [
+    1,
+    "Unit"
+  ]
+}

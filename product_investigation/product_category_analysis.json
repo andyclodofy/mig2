@@ -1,0 +1,156 @@
+{
+  "model": "product.category",
+  "v13_count": 13,
+  "v18_count": 7,
+  "v13_required_fields": {
+    "name": {
+      "type": "char",
+      "string": "Name",
+      "default": null
+    },
+    "property_valuation": {
+      "type": "selection",
+      "string": "Inventory Valuation",
+      "default": null
+    },
+    "property_cost_method": {
+      "type": "selection",
+      "string": "Costing Method",
+      "default": null
+    }
+  },
+  "v18_required_fields": {
+    "name": {
+      "type": "char",
+      "string": "Name",
+      "default": null
+    }
+  },
+  "new_required_in_v18": [],
+  "removed_required_in_v18": [
+    "property_valuation",
+    "property_cost_method"
+  ],
+  "v13_many2one_fields": {
+    "parent_id": {
+      "relation": "product.category",
+      "string": "Parent Category"
+    },
+    "removal_strategy_id": {
+      "relation": "product.removal",
+      "string": "Force Removal Strategy"
+    },
+    "property_account_income_categ_id": {
+      "relation": "account.account",
+      "string": "Income Account"
+    },
+    "property_account_expense_categ_id": {
+      "relation": "account.account",
+      "string": "Expense Account"
+    },
+    "property_stock_journal": {
+      "relation": "account.journal",
+      "string": "Stock Journal"
+    },
+    "property_stock_account_input_categ_id": {
+      "relation": "account.account",
+      "string": "Stock Input Account"
+    },
+    "property_stock_account_output_categ_id": {
+      "relation": "account.account",
+      "string": "Stock Output Account"
+    },
+    "property_stock_valuation_account_id": {
+      "relation": "account.account",
+      "string": "Stock Valuation Account"
+    },
+    "create_uid": {
+      "relation": "res.users",
+      "string": "Created by"
+    },
+    "write_uid": {
+      "relation": "res.users",
+      "string": "Last Updated by"
+    }
+  },
+  "v18_many2one_fields": {
+    "parent_id": {
+      "relation": "product.category",
+      "string": "Parent Category"
+    },
+    "create_uid": {
+      "relation": "res.users",
+      "string": "Created by"
+    },
+    "write_uid": {
+      "relation": "res.users",
+      "string": "Last Updated by"
+    },
+    "property_account_income_categ_id": {
+      "relation": "account.account",
+      "string": "Income Account"
+    },
+    "property_account_expense_categ_id": {
+      "relation": "account.account",
+      "string": "Expense Account"
+    },
+    "removal_strategy_id": {
+      "relation": "product.removal",
+      "string": "Force Removal Strategy"
+    },
+    "property_stock_journal": {
+      "relation": "account.journal",
+      "string": "Stock Journal"
+    },
+    "property_stock_account_input_categ_id": {
+      "relation": "account.account",
+      "string": "Stock Input Account"
+    },
+    "property_stock_account_output_categ_id": {
+      "relation": "account.account",
+      "string": "Stock Output Account"
+    },
+    "property_stock_valuation_account_id": {
+      "relation": "account.account",
+      "string": "Stock Valuation Account"
+    },
+    "property_account_creditor_price_difference_categ": {
+      "relation": "account.account",
+      "string": "Price Difference Account"
+    },
+    "property_account_downpayment_categ_id": {
+      "relation": "account.account",
+      "string": "Downpayment Account"
+    }
+  },
+  "v13_computed_fields": [
+    "product_count",
+    "total_route_ids",
+    "property_account_income_categ_id",
+    "property_account_expense_categ_id",
+    "property_valuation",
+    "property_cost_method",
+    "property_stock_journal",
+    "property_stock_account_input_categ_id",
+    "property_stock_account_output_categ_id",
+    "property_stock_valuation_account_id",
+    "display_name",
+    "__last_update"
+  ],
+  "v18_computed_fields": [
+    "message_is_follower",
+    "message_partner_ids",
+    "has_message",
+    "message_needaction",
+    "message_needaction_counter",
+    "message_has_error",
+    "message_has_error_counter",
+    "message_attachment_count",
+    "message_has_sms_error",
+    "product_count",
+    "display_name",
+    "parent_route_ids",
+    "total_route_ids",
+    "filter_for_stock_putaway_rule"
+  ]
+}

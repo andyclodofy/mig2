@@ -1,0 +1,109 @@
+{
+  "model": "product.pricelist",
+  "v13_count": 58,
+  "v18_count": 0,
+  "v13_required_fields": {
+    "name": {
+      "type": "char",
+      "string": "Pricelist Name",
+      "default": null
+    },
+    "currency_id": {
+      "type": "many2one",
+      "string": "Currency",
+      "default": null
+    }
+  },
+  "v18_required_fields": {
+    "name": {
+      "type": "char",
+      "string": "Pricelist Name",
+      "default": null
+    },
+    "currency_id": {
+      "type": "many2one",
+      "string": "Currency",
+      "default": null
+    }
+  },
+  "new_required_in_v18": [],
+  "removed_required_in_v18": [],
+  "v13_many2one_fields": {
+    "currency_id": {
+      "relation": "res.currency",
+      "string": "Currency"
+    },
+    "company_id": {
+      "relation": "res.company",
+      "string": "Company"
+    },
+    "website_id": {
+      "relation": "website",
+      "string": "Website"
+    },
+    "create_uid": {
+      "relation": "res.users",
+      "string": "Created by"
+    },
+    "write_uid": {
+      "relation": "res.users",
+      "string": "Last Updated by"
+    }
+  },
+  "v18_many2one_fields": {
+    "activity_user_id": {
+      "relation": "res.users",
+      "string": "Responsible User"
+    },
+    "activity_type_id": {
+      "relation": "mail.activity.type",
+      "string": "Next Activity Type"
+    },
+    "activity_calendar_event_id": {
+      "relation": "calendar.event",
+      "string": "Next Activity Calendar Event"
+    },
+    "currency_id": {
+      "relation": "res.currency",
+      "string": "Currency"
+    },
+    "company_id": {
+      "relation": "res.company",
+      "string": "Company"
+    },
+    "create_uid": {
+      "relation": "res.users",
+      "string": "Created by"
+    },
+    "write_uid": {
+      "relation": "res.users",
+      "string": "Last Updated by"
+    }
+  },
+  "v13_computed_fields": [
+    "display_name",
+    "__last_update"
+  ],
+  "v18_computed_fields": [
+    "activity_state",
+    "activity_user_id",
+    "activity_type_id",
+    "activity_type_icon",
+    "activity_date_deadline",
+    "my_activity_date_deadline",
+    "activity_summary",
+    "activity_exception_decoration",
+    "activity_exception_icon",
+    "activity_calendar_event_id",
+    "message_is_follower",
+    "message_partner_ids",
+    "has_message",
+    "message_needaction",
+    "message_needaction_counter",
+    "message_has_error",
+    "message_has_error_counter",
+    "message_attachment_count",
+    "message_has_sms_error",
+    "display_name"
+  ]
+}

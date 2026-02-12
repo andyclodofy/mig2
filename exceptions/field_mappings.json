@@ -1,0 +1,97 @@
+{
+  "res.partner": {
+    "type": {
+      "company": "contact",
+      "default": "contact",
+      "description": "Mapeo de valores para res.partner.type. En v18, 'company' ya no existe, se mapea a 'contact'"
+    }
+  },
+  "res.users": {
+    "chatter_position": {
+      "sided": "bottom",
+      "bottom": "bottom",
+      "top": "top",
+      "default": "bottom",
+      "description": "En v18, 'sided' ya no existe para chatter_position, se mapea a 'bottom'"
+    }
+  },
+  "crm.lead": {
+    "type": {
+      "lead": "opportunity",
+      "opportunity": "opportunity",
+      "default": "opportunity",
+      "description": "En v18, 'lead' y 'opportunity' se unifican. Mapear ambos a 'opportunity' si es necesario. Verificar comportamiento en v18."
+    },
+    "probability": {
+      "description": "Campo probability puede tener valores diferentes en v18. Verificar rangos (0-100 en v13)."
+    }
+  },
+  "crm.stage": {
+    "type": {
+      "lead": "lead",
+      "opportunity": "opportunity",
+      "default": "lead",
+      "description": "Tipo de etapa. Verificar compatibilidad con v18"
+    }
+  },
+  "product.template": {
+    "type": {
+      "product": "consu",
+      "consu": "consu",
+      "service": "service",
+      "default": "consu",
+      "description": "En v18, el valor 'product' ya no existe. Se mapea a 'consu' (Goods). Valores válidos: 'consu', 'service', 'combo'"
+    },
+    "service_type": {
+      "timesheet": "manual",
+      "manual": "manual",
+      "default": "manual",
+      "description": "En v18, el valor 'timesheet' ya no existe. Se mapea a 'manual'. Valores válidos en v18: 'manual'"
+    },
+    "service_tracking": {
+      "default": "no",
+      "description": "Campo nuevo requerido en v18. Valor por defecto: 'no'"
+    },
+    "purchase_line_warn": {
+      "default": "no-message",
+      "description": "Campo nuevo requerido en v18. Valor por defecto: 'no-message'"
+    },
+    "ticket_active": {
+      "default": false,
+      "description": "Campo nuevo requerido en v18. Valor por defecto: false"
+    }
+  },
+  "product.product": {
+    "type": {
+      "product": "consu",
+      "consu": "consu",
+      "service": "service",
+      "default": "consu",
+      "description": "En v18, el valor 'product' ya no existe. Se mapea a 'consu' (Goods). Valores válidos: 'consu', 'service', 'combo'"
+    },
+    "service_type": {
+      "timesheet": "manual",
+      "manual": "manual",
+      "default": "manual",
+      "description": "En v18, el valor 'timesheet' ya no existe. Se mapea a 'manual'. Valores válidos en v18: 'manual'"
+    },
+    "service_tracking": {
+      "default": "no",
+      "description": "Campo nuevo requerido en v18. Valor por defecto: 'no'"
+    },
+    "purchase_line_warn": {
+      "default": "no-message",
+      "description": "Campo nuevo requerido en v18. Valor por defecto: 'no-message'"
+    },
+    "ticket_active": {
+      "default": false,
+      "description": "Campo nuevo requerido en v18. Valor por defecto: false"
+    }
+  },
+  "product.pricelist.item": {
+    "display_applied_on": {
+      "default": "1_product",
+      "description": "Campo nuevo requerido en v18. Se mapea desde applied_on: '1_product' o '2_product_category' -> mismo valor, '0_product_variant' o '3_global' -> '1_product'"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "mapping": {
+    "1": 125,
+    "2": 1
+  },
+  "matches_by_name": [
+    {
+      "name": "EUR",
+      "v13_id": 1,
+      "v13_name": "EUR",
+      "v13_symbol": "€",
+      "v18_id": 125,
+      "v18_name": "EUR",
+      "v18_symbol": "€"
+    },
+    {
+      "name": "USD",
+      "v13_id": 2,
+      "v13_name": "USD",
+      "v13_symbol": "$",
+      "v18_id": 1,
+      "v18_name": "USD",
+      "v18_symbol": "$"
+    }
+  ],
+  "matches_by_symbol": [],
+  "matches_by_id": [],
+  "unmatched_v13": [],
+  "unmatched_v18": [],
+  "summary": {
+    "total_v13": 2,
+    "total_v18": 2,
+    "matched": 2,
+    "unmatched_v13": 0,
+    "unmatched_v18": 0
+  }
+}
