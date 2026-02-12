@@ -190,3 +190,4 @@ El script:
 - El tamaño de batch mínimo es 100 (configurable en BATCH_SIZE)
 
 # mig2
+# mig2
